@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navbar/Header matching the tute mockup -->
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="logo-icon">⛅</span>
+                <span class="logo-text">SkyCast</span>
+            </div>
+            <div class="sub-logo-text">Weather inside simple</div>
+            <div class="live-badge">📍 Live Weather</div>
+        </header>
+
+        <!-- Main Banner -->
+        <main class="main-content">
+            <section class="hero-section">
+                <h2>Check the weather anywhere</h2>
+                <p class="hero-sub">Search any city for current weather and a 5-day forecast.</p>
+                
+                <div class="search-box">
+                    <input type="text" id="city-input" placeholder="Enter a city, (e.g., Colombo)">
+                    <button id="search-btn">Search</button>
+                </div>
+            </section>
+
+            <div id="loading" class="loading" style="display: none;">Loading weather data...</div>
+
+            <!-- Current Weather Card (Hidden initially or shows placeholders) -->
+            <section class="current-weather-section">
+                <div class="weather-card">
+                    <h3 id="city-name">Search a city to view weather</h3>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span>Temperature:</span> <strong id="temp">-</strong> <strong>°C</strong>
+                        </div>
+                        <div class="detail-item">
+                            <span>Wind Speed:</span> <strong id="wind">-</strong> <strong>km/h</strong>
+                        </div>
+                        <div class="detail-item">
+                            <span>Condition:</span> <strong id="condition">-</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast Table Section -->
+            <section class="forecast-section">
+                <div class="forecast-header">
+                    <h3>5-Day Forecast</h3>
+                    <span class="forecast-sub">Upcoming weather condition</span>
+                </div>
+                <div class="table-container">
+                    <table id="forecast-table">
+                        <thead>
+                            <tr>
+                                <th>DATE</th>
+                                <th>CONDITION</th>
+                                <th>MAX °C</th>
+                                <th>MIN °C</th>
+                                <th>PRECIPITATION (MM)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="forecast-tbody">
+                            <!-- Dynamic rows will go here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer matching mockup -->
+        <footer class="app-footer">
+            <div class="footer-logo">⛅ SkyCast</div>
+            <p>simple fast and reliable weather information.</p>
+            <p class="copy">© 2026 SkyCast | Powered by Open-Meteo</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
